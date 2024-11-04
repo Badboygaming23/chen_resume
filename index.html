@@ -182,23 +182,46 @@ header img {
         to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 600px) {
-        header {
-            flex-direction: column;
+	 /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+            header img {
+                width: 1.5in;
+                height: 1.5in;
+                margin-bottom: 10px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            .section h2 {
+                font-size: 1.3em;
+            }
+            .contact, .objective {
+                font-size: 0.9em;
+            }
         }
 
-        h1 {
-            font-size: 2em;
+        @media (max-width: 480px) {
+            .resume {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 1.3em;
+            }
+            .contact, .objective {
+                font-size: 0.8em;
+            }
+            .section h2 {
+                font-size: 1.2em;
+            }
+            .map-container iframe {
+                height: 200px;
+            }
         }
-
-        .section {
-            margin-top: 20px;
-        }
-    }
-	
-	p {
-    color: white;
-}
 
 </style>
 
