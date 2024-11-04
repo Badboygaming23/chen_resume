@@ -29,31 +29,34 @@
 
 
 .resume {
-    background: rgba(255, 255, 255, 0.6); /* More transparent white background for glass effect */
-    backdrop-filter: blur(15px); /* Increased blur effect */
+    background: rgba(255, 255, 255, 0.3); /* Increase transparency for glass effect */
+    backdrop-filter: blur(15px) saturate(150%); /* Add saturation for vibrant colors behind */
+    -webkit-backdrop-filter: blur(15px) saturate(150%); /* Support for older browsers */
     max-width: 800px;
     width: 100%;
-    border-radius: 15px; /* Slightly larger border-radius for a smoother curve */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for more depth */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
     padding: 40px;
     animation: fadeIn 1s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border to enhance the glass look */
-    overflow: hidden; /* Ensure content does not overflow the rounded corners */
-    position: relative; /* Position for pseudo-elements */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border for glass effect */
+    overflow: hidden;
+    position: relative;
+    color: #333; /* Text color for readability against the background */
 }
 
-/* Optional: Adding a pseudo-element for a more dynamic effect */
+/* Optional: Adding a pseudo-element for a subtle layered effect */
 .resume::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1); /* Very light overlay for added depth */
-    border-radius: 15px; /* Match the main element's border-radius */
-    z-index: 0; /* Position behind the content */
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.05); /* Very subtle overlay */
+    border-radius: 20px;
+    z-index: 0;
 }
+
 
         header {
             display: flex;
