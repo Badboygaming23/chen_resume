@@ -6,207 +6,207 @@
     <title>Rolie Mae Tillo's Resume</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="icon" type="image/x-icon" href="resume.ico">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+ <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: 
-                linear-gradient(rgba(74, 144, 226, 0.6), rgba(233, 78, 119, 0.6)), 
-                url('chen.png') no-repeat center center fixed; /* Replace with your image path */
-            background-size: cover;
-            color: #333;
-            padding: 20px;
-        }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: 
+            linear-gradient(rgba(74, 144, 226, 0.6), rgba(233, 78, 119, 0.6)), 
+            url('chen.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        padding: 20px;
+    }
 
+    .resume {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(15px) saturate(150%);
+        -webkit-backdrop-filter: blur(15px) saturate(150%);
+        max-width: 800px;
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        animation: fadeIn 1s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        overflow: hidden;
+        position: relative;
+        color: #333;
+        z-index: 1; /* Ensures layering over pseudo-elements */
+    }
 
-.resume {
-    background: rgba(255, 255, 255, 0.3); /* Increase transparency for glass effect */
-    backdrop-filter: blur(15px) saturate(150%); /* Add saturation for vibrant colors behind */
-    -webkit-backdrop-filter: blur(15px) saturate(150%); /* Support for older browsers */
-    max-width: 800px;
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
-    padding: 40px;
-    animation: fadeIn 1s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border for glass effect */
-    overflow: hidden;
-    position: relative;
-    color: #333; /* Text color for readability against the background */
+    .resume::before {
+        content: '';
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 120%;
+        height: 120%;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        z-index: 0;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+header img {
+    width: 2in;
+    height: 2in;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Adding a pseudo-element for a subtle layered effect */
-.resume::before {
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 120%;
-    height: 120%;
-    background: rgba(255, 255, 255, 0.05); /* Very subtle overlay */
-    border-radius: 20px;
-    z-index: 0;
-}
 
 
+    h1 {
+        font-size: 2.5em;
+        color: #007bff;
+        margin: 0;
+    }
+
+    .contact {
+        color: #ffffff;
+        font-size: 1em;
+    }
+
+    .objective {
+        font-style: italic;
+        margin-top: 10px;
+        font-size: 1.1em;
+        color: #ffffff;
+    }
+
+    .section {
+        margin-top: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .section:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    .section h2 {
+        color: #007bff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        border-left: 5px solid #007bff;
+        padding-left: 10px;
+        position: relative;
+    }
+
+    .section h2 i {
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-left: 20px;
+    }
+
+    ul li {
+        margin: 5px 0;
+        position: relative;
+        padding-left: 25px;
+        color: #ffffff;
+    }
+
+    ul li:before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: #007bff;
+        font-size: 1.5em;
+    }
+
+    .map-section {
+        margin-top: 30px;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        font-size: 0.9em;
+        color: #ffffff;
+        margin-top: 40px;
+        padding: 20px 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    footer p {
+        margin: 5px 0;
+        transition: color 0.3s ease;
+    }
+
+    footer p:hover {
+        color: #ffffff;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
         header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-align: center;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            flex-direction: column;
         }
-
-        header img {
-            width: 80px; /* Width remains the same */
-            height: 80px; /* Height remains the same */
-            border-radius: 10px; /* Slightly rounded corners */
-            object-fit: cover; /* Ensures the image covers the area without distortion */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
-        }
-
 
         h1 {
-            font-size: 2.5em;
-            color: #007bff;
-            margin: 0;
-        }
-
-        .contact {
-            color: #555;
-            font-size: 1em;
-        }
-
-        .objective {
-            margin-top: 10px;
-            font-style: italic;
-            color: #666;
+            font-size: 2em;
         }
 
         .section {
-            margin-top: 30px;
-            transition: transform 0.3s ease;
+            margin-top: 20px;
         }
-
-        .section:hover {
-            transform: scale(1.02);
-        }
-
-        .section h2 {
-            color: #007bff;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            font-size: 1.5em;
-            border-left: 5px solid #007bff;
-            padding-left: 10px;
-            position: relative;
-        }
-
-        .section h2 i {
-            margin-right: 10px;
-            color: #007bff;
-        }
-
-        ul {
-            list-style-type: none;
-            margin-left: 20px;
-        }
-
-        ul li {
-            margin: 5px 0;
-            position: relative;
-            padding-left: 25px;
-            color: #555;
-        }
-
-        ul li:before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: #007bff;
-            font-size: 1.5em;
-        }
-
-        .map-section {
-            margin-top: 30px;
-        }
-
-        .map-section h2 {
-            margin-bottom: 10px;
-        }
-
-        .map-container {
-            width: 100%;
-            height: 300px;
-            border: 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background for contrast */
-    text-align: center;
-    font-size: 0.9em;
-    color: #ffffff; /* White text for readability */
-    margin-top: 40px;
-    padding: 20px 15px; /* Increased padding for a more spacious feel */
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Subtle top border */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    position: relative; /* Position for potential hover effects */
-    border-radius: 10px; /* Curved corners for the footer */
-    overflow: hidden; /* Ensures content stays within rounded corners */
+    }
+	
+	p {
+    color: white;
 }
 
-footer p {
-    margin: 5px 0; /* Small margin between footer items */
-    transition: color 0.3s ease; /* Smooth transition for hover effects */
-}
+</style>
 
-footer p:hover {
-    color: #007bff; /* Change color on hover for interactivity */
-}
-
-
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-        }
-		
-		.objective {
-    font-style: italic; /* Makes the text italic */
-    margin-top: 10px;  /* Adds space above the objective text */
-    font-size: 1.1em;   /* Slightly increases the font size */
-}
-
-    </style>
 </head>
 <body>
     <div class="resume">
 <header>
-    <img src="chen.png" alt="Rolie Mae Tillo">
+   <img src="chen.png" alt="Profile Picture">
     <div>
         <h1>Rolie Mae T. Tillo</h1>
         <p class="contact">📧 roliemaetillo@gmail.com | 📞 09128283347 / 09816249065</p>
